@@ -1,0 +1,115 @@
+body {
+	 margin: 0;
+	 padding: 0;
+	 height: 100vh;
+	 background-color: #ecf0f9;
+	 background-attachment: fixed;
+
+}
+
+.box {
+    padding: 20px 20px
+	position: absolute;
+}
+
+.box h1 { text-shadow: 0 0 10px rgba(0,0,0,0.3);
+    letter-spacing:1px;
+    text-align:center;
+}
+
+.navbar-pad {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.notice {
+    font-size: 15px;
+}
+
+#footer {
+    background: linear-gradient(135deg, #1a9be6, #1a57e6);
+    margin-top: 75px;
+    color: #ffffff;
+}
+
+.container-fluid {
+  padding: 3% 0 1%;
+}
+
+
+.full {
+    height: 75%;
+}
+
+.center-div {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+}
+
+.wide {
+    width: 700px;
+    height: 300px;
+}
+
+
+
+.light-pad {
+    padding: 2% 0% 2% 0%;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 500px) {
+    .navbar-pad {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .center-div {
+        width: 90%;
+        height: auto;
+        max-width: 400px;
+    }
+}
+
+
+.control-label label {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container.full {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.center-div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer {
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #1a9be6, #1a57e6);
+    margin-top: 75px;
+    color: #ffffff;
+}
+
+.container-fluid {
+    padding: 3% 0 1%;
+}

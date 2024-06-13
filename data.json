@@ -1,0 +1,57 @@
+[
+  {
+    "choices": [
+      ["Yes", 100],
+      ["No", 0]
+    ],
+    "question": "Do you recycle regularly?"
+  },
+  {
+    "choices": [
+      ["Always", 100],
+      ["Sometimes", 50],
+      ["Never", 0]
+    ],
+    "question": "How often do you use public transportation instead of a personal vehicle?"
+  },
+  {
+    "choices": [
+      ["Yes", 100],
+      ["No", 0]
+    ],
+    "question": "Do you use energy-efficient appliances at home?"
+  },
+  {
+    "choices": [
+      ["Yes", 100],
+      ["No", 0],
+      ["Sometimes", 50]
+    ],
+    "question": "Do you avoid using single-use plastics whenever possible?"
+  },
+  {
+    "choices": [
+      ["Very aware", 100],
+      ["Somewhat aware", 50],
+      ["Not aware", 0]
+    ],
+    "question": "How aware are you of the impact of climate change?"
+  },
+  {
+    "choices": [
+      ["Very often", 100],
+      ["Often", 75],
+      ["Rarely", 25],
+      ["Never", 0]
+    ],
+    "question": "How often do you turn off lights and appliances when not in use?"
+  },
+  {
+    "choices": [
+      ["Always", 100],
+      ["Sometimes", 50],
+      ["Never", 0]
+    ],
+    "question": "Do you conserve water by fixing leaks and using water-saving fixtures?"
+  }
+]

@@ -1,0 +1,13 @@
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% include "header.html" %}
+
+<div class="container full">
+<h1>Questionnaire</h1>
+<div class="light-pad"><h4>What is your age group</h4></div>
+
+    {{ render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+
+</div>
+
+{% include "footer.html" %}
