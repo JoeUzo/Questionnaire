@@ -5,6 +5,7 @@ from flask_login import UserMixin, login_user, LoginManager, login_required, log
 from werkzeug.security import generate_password_hash, check_password_hash
 from random import randint
 from functools import wraps
+from libgravatar import Gravatar
 from forms import *
 from ques import questions
 from get_data import to_dict, tabulate
@@ -38,8 +39,10 @@ class User(db.Model, UserMixin):
     __tablename__ = "site_users"
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, nullable=False, unique=True)
+    email = db.Column(db.String, unique=True)
     password = db.Column(db.String, nullable=False)
     age_group = db.Column(db.String)
+    gravatar = db.Column(db.String)
 
     # One-to-Many relationships - Parent.
     first = db.relationship('FirstRange', back_populates='user')
@@ -107,10 +110,12 @@ def register():
     if form.validate_on_submit():
         user = User()
         user.username = form.username.data.title()
+        user.email = form.email.data.lower()
+        user.gravatar = Gravatar(form.email.data.lower()).get_image(size=520, default='robohash')
         password = form.password.data
 
-        if user.query.filter_by(username=user.username.title()).first():
-            flash(f"User {user.username} already exists!", 'info')
+        if user.query.filter_by(username=user.username.title()).first() or user.query.filter_by(username=user.email).first():
+            flash(f"Username or Email address already exists!", 'info')
             return redirect(url_for('register'))
 
         # user.password = bcrypt.generate_password_hash(password)
@@ -134,7 +139,8 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data.title()).first()
-        # if not user or not bcrypt.check_password_hash(user.password, form.password.data):
+        if user is None:
+            user = User.query.filter_by(email=form.username.data.lower()).first()
         if not user or not check_password_hash(user.password, form.password.data):
             flash("No user found with that username, or password invalid.")
             return redirect(url_for('login'))
@@ -310,9 +316,9 @@ def contact():
     if form.validate_on_submit():
         data = form.data
         Mail(data)
-        return render_template("contact.html", form=form, success='Successfully sent your message.')
+        return redirect(url_for('contact'))
     return render_template("contact.html", form=form)
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

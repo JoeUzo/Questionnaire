@@ -54,6 +54,9 @@
                         <li><a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a></li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=""><span class="commenterImage"><img src="{{ current_user.gravatar }}"/><span class="username-tooltip">{{ current_user.name }}</span></span></a>
+                </li>
                 {% endif %}
             </ul>
         </div>

@@ -113,3 +113,52 @@ html, body {
 .container-fluid {
     padding: 3% 0 1%;
 }
+
+
+
+.commenterImage img {
+  display: block; /* Ensures the image is block level for margin auto to work */
+  margin: auto; /* Centers the image horizontally */
+  border-radius: 50%; /* Makes the image circular */
+  width: 40px; /* Sets the width of the image */
+  height: 40px; /* Sets the height of the image, keep it same as width for a perfect circle */
+  background-color: #f8f9fa; /* Light background color, change as needed */
+  object-fit: cover; /* Ensures the image covers the area, adjust as per your need */
+  border: 2px solid #fff; /* Optional: Adds a border around the image, remove or change color as needed */
+}
+
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center; /* Centers the navbar items vertically */
+}
+
+.commenterImage {
+  position: relative; /* Needed for absolute positioning of the tooltip */
+  display: inline-block; /* Allows the span to behave like a block, needed for hover */
+}
+
+.username-tooltip {
+  visibility: hidden; /* Hide the tooltip by default */
+  width: auto; /* Adjust width based on content, or set a specific width */
+  background-color: black; /* Tooltip background */
+  color: #fff; /* Text color */
+  text-align: center; /* Center the text inside the tooltip */
+  border-radius: 6px; /* Optional: rounds the corners of the tooltip */
+  padding: 5px 10px; /* Padding inside the tooltip */
+
+  /* Positioning */
+  position: absolute;
+  z-index: 1; /* Ensures the tooltip is above other content */
+  top: 50%; /* Aligns the middle of the tooltip with the image */
+  left: 100%; /* Positions the tooltip to the right of the image */
+  transform: translateY(-50%); /* Adjusts vertical alignment */
+
+  /* Optional: Add an arrow */
+  opacity: 0; /* Use opacity for transition */
+  transition: opacity 0.3s; /* Smooth transition for the tooltip appearance */
+}
+
+.commenterImage:hover .username-tooltip {
+  visibility: visible; /* Show the tooltip on hover */
+  opacity: 1; /* Make it fully opaque */
+}

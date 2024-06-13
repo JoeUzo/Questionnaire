@@ -1,25 +1,23 @@
 {% include "header.html" %}
 
-
-<div class="container full ">
+<div class="container full">
     <div class="center-div">
-        <div class="box">
-
-            <h1>Welcome</h1>
+        <div class="box text-center">
+            <h1>Welcome to Joe's Questionnaire</h1>
+            <p class="lead">Your trusted platform for conducting insightful questionnaires and surveys.</p>
+            <hr class="my-4">
+            <p>Join us today to participate in our latest surveys and share your valuable opinions. Your feedback helps us improve and make informed decisions.</p>
             <div class="d-grid gap-2 col-6 mx-auto light-pad">
-            {% if not current_user.is_authenticated %}
-                <a href="{{ url_for('login') }}" class="btn btn-primary btn-block btn-large" >Login</a>
-                <a href="{{ url_for('register') }}" class="btn btn-secondary btn-block btn-large" >Register</a>
-            {% else %}
-                <a href="{{ url_for('logout') }}" class="btn btn-primary btn-block btn-large" >Logout</a>
-            {% endif %}
+                {% if not current_user.is_authenticated %}
+                    <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg">Login</a>
+                    <a href="{{ url_for('register') }}" class="btn btn-secondary btn-lg">Register</a>
+                {% else %}
+                    <a href="{{ url_for('logout') }}" class="btn btn-danger btn-lg">Logout</a>
+                {% endif %}
             </div>
-
-
         </div>
     </div>
 </div>
-
 
 {% include "footer.html" %}
 
