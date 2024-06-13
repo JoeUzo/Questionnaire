@@ -1,8 +1,7 @@
-from flask import Flask, render_template, url_for, redirect, request, flash, session, abort, send_from_directory
+from flask import Flask, render_template, url_for, redirect, flash, session, abort, send_from_directory
 from flask_bootstrap import Bootstrap5
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
-from flask_bcrypt import Bcrypt
 from werkzeug.security import generate_password_hash, check_password_hash
 from random import randint
 from functools import wraps
@@ -17,7 +16,6 @@ load_dotenv()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
-bcrypt = Bcrypt(app)
 Bootstrap5(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("ADATABASE_URL")
@@ -306,14 +304,6 @@ def logout():
     return redirect(url_for('home'))
 
 
-# @app.route("/contact", methods=["POST", "GET"])
-# def contact():
-#     if request.method == 'POST':
-#         data = request.form
-#         Mail(data)
-#         return render_template("contact.html", success='Successfully sent your message.')
-#     return render_template("contact.html")
-
 @app.route("/contact", methods=["POST", "GET"])
 def contact():
     form = ContactForm()
@@ -325,5 +315,4 @@ def contact():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
-
+    app.run()
