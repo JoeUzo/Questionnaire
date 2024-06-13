@@ -162,3 +162,62 @@ html, body {
   visibility: visible; /* Show the tooltip on hover */
   opacity: 1; /* Make it fully opaque */
 }
+
+
+
+
+/* Ensure the HTML and body elements take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: #ecf0f9;
+    background-attachment: fixed;
+}
+
+/* The container should take up the remaining space */
+.container.full {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make the center content grow to take available space */
+.center-div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-container {
+    margin-top: 20px;
+}
+
+.light-pad {
+    padding: 15px 0;
+}
+
+/* Footer styles */
+footer {
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #1a9be6, #1a57e6);
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}

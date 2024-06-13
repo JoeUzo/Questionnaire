@@ -3,17 +3,24 @@
 {% include "header.html" %}
 
 <div class="container full">
-<h1 style="padding-top: 30px;">Question {{ no_ }}</h1>
-    <div class="light-pad">
-    <h4>{{ question }}</h4></div>
+    <div class="center-div">
+        <div class="box">
+            <h1 class="display-4" style="padding-top: 30px;">Question {{ no_ }}</h1>
+            <div class="light-pad">
+                <h4>{{ question }}</h4>
+            </div>
 
-    {% if form.submit.label.text != 'Submit' %}
-        {{ render_form(form, novalidate=True, button_map={"submit": "secondary"}) }}
-    {% else %}
-        {{ render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
-    {% endif %}
-
+            <div class="form-container">
+                {% if form.submit.label.text != 'Submit' %}
+                    {{ render_form(form, novalidate=True, button_map={"submit": "secondary"}) }}
+                {% else %}
+                    {{ render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
 </div>
 
 {% include "footer.html" %}
+
 
