@@ -3,11 +3,18 @@
 {% include "header.html" %}
 
 <div class="container full">
-<h1>Questionnaire</h1>
-<div class="light-pad"><h4>What is your age group</h4></div>
+    <div class="center-div">
+        <div class="box">
+            <h1 class="display-4" style="padding-top: 30px;">Age</h1>
+            <div class="light-pad">
+                <h4>What is your age group?</h4>
+            </div>
 
-    {{ render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
-
+            <div class="form-container">
+                        {{ render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+            </div>
+        </div>
+    </div>
 </div>
 
 {% include "footer.html" %}

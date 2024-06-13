@@ -2,15 +2,11 @@
 
 {% include "header.html" %}
 
-<div class="container full ">
-    <div class="center-div">
-    <div class="col-sm-12 col-md-10 mx-auto box control-label up-a-little">
-  <h1>Contact Me</h1>
-
+<div class="container-fluid full-height d-flex justify-content-center align-items-center">
+    <div class="col-sm-12 col-md-8 col-lg-6 box bg-light p-5 rounded">
+        <h1 class="mb-4 text-center">Contact Me</h1>
         {{ render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
-        <br>
     </div>
-  </div>
 </div>
 
 {% include "footer.html" %}

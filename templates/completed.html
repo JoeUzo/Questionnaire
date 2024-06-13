@@ -1,14 +1,14 @@
 {% include "header.html" %}
 
-<div class="container full ">
-    <div class="center-div wide">
-        <div class="box">
-  <h1>THANK YOU FOR COMPLETING THE QUESTIONNAIRE</h1>
-      <div class="d-grid gap-2 col-6 mx-auto light-pad">
-      <a href="{{ url_for('logout') }}" class="btn btn-primary btn-large">Logout</a>
-</div>
+<div class="container-fluid full-height d-flex justify-content-center align-items-center">
+    <div class="box bg-light p-5 rounded text-center">
+        <h1 class="mb-4">Thank You for Completing the Questionnaire</h1>
+        <p class="lead">We appreciate your time and effort in providing your valuable insights.</p>
+        <div class="d-grid gap-2 col-6 mx-auto light-pad">
+            <a href="{{ url_for('logout') }}" class="btn btn-danger btn-lg">Logout</a>
+        </div>
     </div>
-  </div>
 </div>
 
 {% include "footer.html" %}
+

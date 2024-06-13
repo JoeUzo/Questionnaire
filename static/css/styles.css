@@ -1,20 +1,20 @@
 body {
-	 margin: 0;
-	 padding: 0;
-	 height: 100vh;
-	 background-color: #ecf0f9;
-	 background-attachment: fixed;
-
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #ecf0f9;
+    background-attachment: fixed;
 }
 
 .box {
-    padding: 20px 20px
-	position: absolute;
+    padding: 20px 20px;
+    position: absolute;
 }
 
-.box h1 { text-shadow: 0 0 10px rgba(0,0,0,0.3);
-    letter-spacing:1px;
-    text-align:center;
+.box h1 {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .navbar-pad {
@@ -33,9 +33,8 @@ body {
 }
 
 .container-fluid {
-  padding: 3% 0 1%;
+    padding: 3% 0 1%;
 }
-
 
 .full {
     height: 75%;
@@ -55,14 +54,11 @@ body {
     height: 300px;
 }
 
-
-
 .light-pad {
-    padding: 2% 0% 2% 0%;
+    padding: 2% 0;
 }
 
 /* Responsive Styles */
-
 @media (max-width: 500px) {
     .navbar-pad {
         padding-top: 8px;
@@ -76,12 +72,10 @@ body {
     }
 }
 
-
 .control-label label {
     font-size: 20px;
     font-weight: 500;
 }
-
 
 html, body {
     height: 100%;
@@ -114,57 +108,48 @@ html, body {
     padding: 3% 0 1%;
 }
 
-
-
 .commenterImage img {
-  display: block; /* Ensures the image is block level for margin auto to work */
-  margin: auto; /* Centers the image horizontally */
-  border-radius: 50%; /* Makes the image circular */
-  width: 40px; /* Sets the width of the image */
-  height: 40px; /* Sets the height of the image, keep it same as width for a perfect circle */
-  background-color: #f8f9fa; /* Light background color, change as needed */
-  object-fit: cover; /* Ensures the image covers the area, adjust as per your need */
-  border: 2px solid #fff; /* Optional: Adds a border around the image, remove or change color as needed */
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #f8f9fa;
+    object-fit: cover;
+    border: 2px solid #fff;
 }
 
 .navbar-nav .nav-item {
-  display: flex;
-  align-items: center; /* Centers the navbar items vertically */
+    display: flex;
+    align-items: center;
 }
 
 .commenterImage {
-  position: relative; /* Needed for absolute positioning of the tooltip */
-  display: inline-block; /* Allows the span to behave like a block, needed for hover */
+    position: relative;
+    display: inline-block;
 }
 
 .username-tooltip {
-  visibility: hidden; /* Hide the tooltip by default */
-  width: auto; /* Adjust width based on content, or set a specific width */
-  background-color: black; /* Tooltip background */
-  color: #fff; /* Text color */
-  text-align: center; /* Center the text inside the tooltip */
-  border-radius: 6px; /* Optional: rounds the corners of the tooltip */
-  padding: 5px 10px; /* Padding inside the tooltip */
-
-  /* Positioning */
-  position: absolute;
-  z-index: 1; /* Ensures the tooltip is above other content */
-  top: 50%; /* Aligns the middle of the tooltip with the image */
-  left: 100%; /* Positions the tooltip to the right of the image */
-  transform: translateY(-50%); /* Adjusts vertical alignment */
-
-  /* Optional: Add an arrow */
-  opacity: 0; /* Use opacity for transition */
-  transition: opacity 0.3s; /* Smooth transition for the tooltip appearance */
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .commenterImage:hover .username-tooltip {
-  visibility: visible; /* Show the tooltip on hover */
-  opacity: 1; /* Make it fully opaque */
+    visibility: visible;
+    opacity: 1;
 }
-
-
-
 
 /* Ensure the HTML and body elements take up the full height */
 html, body {
@@ -199,7 +184,6 @@ body {
     background: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-
     max-width: 600px;
     width: 100%;
     margin: 0 auto;
@@ -220,4 +204,36 @@ footer {
     color: #ffffff;
     padding: 10px 0;
     text-align: center;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid.full-height {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.box {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.light-pad {
+    padding: 15px 0;
+}
+
+.form-label {
+    font-weight: bold;
 }

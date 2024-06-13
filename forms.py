@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, RadioField, SelectField
-from wtforms.validators import Length, DataRequired, Email
+from wtforms.validators import Length, DataRequired, Email, EqualTo
 from flask_ckeditor import CKEditorField
 
 
@@ -8,6 +8,7 @@ class RegisterForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Username"})
     email = StringField('Email', validators=[DataRequired(), Email()], render_kw={"placeholder": "Email"})
     password = PasswordField('Password', validators=[DataRequired(), Length(min=4, max=80)], render_kw={"placeholder": "Password"})
+    confirm_password = PasswordField('Retype Password', validators=[DataRequired(), EqualTo('password', message='Passwords must match')], render_kw={"placeholder": "Retype Password"})
     submit = SubmitField('Register')
 
 
