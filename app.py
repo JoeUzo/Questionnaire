@@ -235,7 +235,6 @@ def submit_choices(ques, ch, scr):
         if tables[table].query.filter_by(user_id=current_user.id, question=ques).first() is not None:
             tables[table].query.filter_by(user_id=current_user.id, question=ques).delete()
 
-    print(f"this {user.age_group}, {current_user.id}")
     add_choice = tables[user.age_group](
         question=ques,
         user=current_user,
@@ -321,4 +320,4 @@ def contact():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
