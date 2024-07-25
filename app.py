@@ -114,7 +114,7 @@ def register():
         user.gravatar = Gravatar(form.email.data.lower()).get_image(size=520, default='robohash')
         password = form.password.data
 
-        if user.query.filter_by(username=user.username.title()).first() or user.query.filter_by(username=user.email).first():
+        if user.query.filter_by(username=user.username.title()).first() or user.query.filter_by(email=user.email).first():
             flash(f"Username or Email address already exists!", 'info')
             return redirect(url_for('register'))
 
