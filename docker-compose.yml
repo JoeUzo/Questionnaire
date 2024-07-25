@@ -8,16 +8,18 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_URL=postgresql://postgres:P1+r6Vuu*BP9n*q8!b@db:5432/mydatabase
+      - DATABASE_URL=postgresql://joeii:yourpassword@db:5432/newdatabase
+    env_file:
+      - .env
     volumes:
       - .:/app
 
   db:
     image: postgres:13
     environment:
-      POSTGRES_DB: mydatabase
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: P1+r6Vuu*BP9n*q8!b
+      POSTGRES_DB: newdatabase
+      POSTGRES_USER: joeii
+      POSTGRES_PASSWORD: yourpassword
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
