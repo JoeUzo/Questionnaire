@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://postgres:P1+r6Vuu*BP9n*q8!b@db:5432/mydatabase
+    volumes:
+      - .:/app
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: P1+r6Vuu*BP9n*q8!b
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
