@@ -25,7 +25,7 @@ The "Flask Questionnaire" project is a web application designed to collect user 
 
 1. **Pull the Docker Image:**
    ```bash
-   docker pull joeuzo/questionnaire:latest
+   docker pull joeuzo/questionnaire:tagname
    ```
 
 2. **Prepare the `.env` File:**
@@ -39,7 +39,7 @@ The "Flask Questionnaire" project is a web application designed to collect user 
 
 3. **Run the Docker Container:**
    ```bash
-   docker run --env-file .env -p 5000:5000 joeuzo/questionnaire:latest
+   docker run --env-file .env -p 5000:5000 joeuzo/questionnaire:tagname
    ```
 
 ### Manual Installation
@@ -113,8 +113,8 @@ You can find the Docker image for this project on Docker Hub:
 To run the Docker image:
 
 ```sh
-docker pull joeuzo/questionnaire:latest
-docker run --env-file .env -p 5000:5000 joeuzo/questionnaire:latest
+docker pull joeuzo/questionnaire:tagname
+docker run --env-file .env -p 5000:5000 joeuzo/questionnaire:tagname
 ```
 
 ## License
