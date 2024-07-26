@@ -17,7 +17,7 @@ A web application built using Python and Flask that allows users to register, lo
 
 ## Project Overview
 
-The "Flask User Questionnaire" project is a web application designed to collect user responses to a series of questions. Users can register, log in, complete the questionnaire, and view their results. Admin users can export the collected data for further analysis.
+The "Flask Questionnaire" project is a web application designed to collect user responses to a series of questions. Users can register, log in, complete the questionnaire, and view their results. Admin users can export the collected data for further analysis.
 
 ## Installation Instructions
 
