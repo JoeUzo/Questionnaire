@@ -8,6 +8,29 @@ The "Flask User Questionnaire" project is a web application designed to collect 
 
 ## Installation Instructions
 
+### Using Docker
+
+1. **Pull the Docker Image:**
+   ```bash
+   docker pull joeuzo/questionnaire:latest
+   ```
+
+2. **Prepare the `.env` File:**
+   Create a `.env` file in your working directory with the following content:
+   ```makefile
+   SECRET_KEY=your_secret_key
+   DATABASE_URL=sqlite:///questionnaire.db  # Or your preferred database URL
+   EMAIL_KEY=your_email_app_key
+   EMAIL_ADDRESS=your_email@example.com
+   ```
+
+3. **Run the Docker Container:**
+   ```bash
+   docker run --env-file .env -p 5000:5000 joeuzo/questionnaire:latest
+   ```
+
+### Manual Installation
+
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/JoeUzo/Flask-User-Questionnaire.git
@@ -30,6 +53,8 @@ The "Flask User Questionnaire" project is a web application designed to collect 
    ```makefile
    SECRET_KEY=your_secret_key
    DATABASE_URL=sqlite:///questionnaire.db  # Or your preferred database URL
+   EMAIL_KEY=your_email_app_key
+   EMAIL_ADDRESS=your_email@example.com
    ```
 
 5. **Initialize the Database:**
@@ -69,3 +94,16 @@ Contributions are welcome! If you would like to contribute, please follow these 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Docker Image
+
+You can find the Docker image for this project on Docker Hub:
+
+[![Docker Image](https://img.shields.io/badge/Docker%20Hub-questionnaire--web-blue)](https://hub.docker.com/r/joeuzo/questionnaire)
+
+To run the Docker image:
+
+```sh
+docker pull joeuzo/questionnaire:latest
+docker run --env-file .env -p 5000:5000 joeuzo/questionnaire:latest
+```
