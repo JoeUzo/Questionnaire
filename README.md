@@ -91,10 +91,6 @@ Contributions are welcome! If you would like to contribute, please follow these 
 4. Push to the branch (`git push origin feature-branch`)
 5. Create a new Pull Request
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Docker Image
 
 You can find the Docker image for this project on Docker Hub:
@@ -107,3 +103,7 @@ To run the Docker image:
 docker pull joeuzo/questionnaire:latest
 docker run --env-file .env -p 5000:5000 joeuzo/questionnaire:latest
 ```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
