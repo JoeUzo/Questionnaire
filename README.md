@@ -11,8 +11,8 @@ A web application built using Python and Flask that allows users to register, lo
 - [Usage](#usage)
 - [Features](#features)
 - [Contributing](#contributing)
-- [License](#license)
 - [Docker Image](#docker-image)
+- [License](#license)
 
 
 ## Project Overview
