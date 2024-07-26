@@ -2,6 +2,19 @@
 
 A web application built using Python and Flask that allows users to register, log in, complete a questionnaire, and view their results. This application includes user authentication, data storage, and an admin panel for data export.
 
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Installation Instructions](#installation-instructions)
+  - [Using Docker](#using-docker)
+  - [Manual Installation](#manual-installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
+- [Docker Image](#docker-image)
+
+
 ## Project Overview
 
 The "Flask User Questionnaire" project is a web application designed to collect user responses to a series of questions. Users can register, log in, complete the questionnaire, and view their results. Admin users can export the collected data for further analysis.
