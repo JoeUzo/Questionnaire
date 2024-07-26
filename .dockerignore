@@ -1,0 +1,35 @@
+# Exclude all hidden files and directories
+.*
+!/.dockerignore
+
+# Exclude git directory and files
+.git
+.gitignore
+
+# Exclude Python cache files
+__pycache__
+*.pyc
+*.pyo
+
+# Exclude virtual environments
+venv
+env
+
+# Exclude development and runtime files
+.env
+*.env
+
+# Exclude local settings and config files
+*.local
+*.config
+
+# Exclude Docker Compose override files
+docker-compose.override.yml
+
+# Exclude package manager lock files
+poetry.lock
+
+# Exclude test and documentation files
+/tests
+/docs
+
