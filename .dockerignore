@@ -32,3 +32,6 @@ poetry.lock
 # Exclude test and documentation files
 /tests
 /docs
+
+# Ignore Github Actions
+.github/
