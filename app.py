@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect, flash, session, abort, send_from_directory
+from flask import render_template, url_for, redirect, flash, session, abort, send_from_directory
 from flask_bootstrap import Bootstrap5
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
@@ -7,7 +7,7 @@ from random import randint
 from functools import wraps
 from libgravatar import Gravatar
 from ques.forms import *
-from ques.ques import questions
+from ques.ques import get_questions
 from ques.get_data import to_dict, tabulate
 from ques.mail import Mail
 from dotenv import load_dotenv
@@ -22,6 +22,8 @@ login_manager.session_protection = "strong"
 login_manager.login_view = "login"
 login_manager.login_message_category = "info"
 login_manager.init_app(app)
+
+questions = get_questions()
 
 
 @login_manager.user_loader
@@ -172,6 +174,11 @@ def select_age():
         print(user.age_group, current_user.id)
         return redirect(url_for('questionnaire'))
     return render_template('agegroup.html', form=form)
+
+
+# if 'questions' not in session:
+#     session['questions'] = get_questions()
+#     questions = session['questions']
 
 
 @app.route('/questionnaire', methods=['GET', 'POST'])
