@@ -32,9 +32,10 @@ The "Flask Questionnaire" project is a web application designed to collect user 
    Create a `.env` file in your working directory with the following content:
    ```makefile
    SECRET_KEY=your_secret_key
-   DATABASE_URL=sqlite:///questionnaire.db  # Or your preferred database URL
-   EMAIL_KEY=your_email_app_key
-   EMAIL_ADDRESS=your_email@example.com
+   QUESTION_URL=https://example.com/api/questions
+   DATABASE_URL=sqlite:///path/to/database.db
+   email_key=your_email_app_key
+   email_=your_email@example.com
    ```
 
 3. **Run the Docker Container:**
@@ -65,9 +66,10 @@ The "Flask Questionnaire" project is a web application designed to collect user 
    Create a .env file in the root directory and add the following variables:
    ```makefile
    SECRET_KEY=your_secret_key
-   DATABASE_URL=sqlite:///questionnaire.db  # Or your preferred database URL
-   EMAIL_KEY=your_email_app_key
-   EMAIL_ADDRESS=your_email@example.com
+   QUESTION_URL=https://example.com/api/questions
+   DATABASE_URL=sqlite:///path/to/database.db
+   email_key=your_email_app_key
+   email_=your_email@example.com
    ```
 
 5. **Initialize the Database:**
