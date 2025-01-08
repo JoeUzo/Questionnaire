@@ -20,5 +20,5 @@ def tabulate(dictionary):
     df = pandas.DataFrame(filtered_dictionary)
     reshaped_df = df.pivot(index='user_id', columns=['question'], values=['choice', 'score'])
     reshaped_df['mean'] = reshaped_df.score.mean(axis=1)
-    reshaped_df.to_excel("static/resources/output.xlsx")
+    reshaped_df.to_excel("ques/static/resources/output.xlsx")
 

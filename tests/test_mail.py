@@ -1,8 +1,7 @@
-import os
 import pytest
-import smtplib
-from unittest.mock import patch, MagicMock
-from mail import Mail
+from unittest.mock import patch
+from ques.mail import Mail
+
 
 def test_mail_env_missing(monkeypatch):
     """

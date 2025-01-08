@@ -52,4 +52,4 @@ dist/
 
 # Instances
 instance/database.db
-static/resources/output.xlsx
+ques/static/resources/output.xlsx

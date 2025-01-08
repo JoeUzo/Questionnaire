@@ -6,21 +6,15 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from random import randint
 from functools import wraps
 from libgravatar import Gravatar
-from forms import *
-from ques import questions
-from get_data import to_dict, tabulate
-from mail import Mail
+from ques.forms import *
+from ques.ques import questions
+from ques.get_data import to_dict, tabulate
+from ques.mail import Mail
 from dotenv import load_dotenv
-import os
+from ques import app
 
-load_dotenv()
-
-app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
 Bootstrap5(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 login_manager = LoginManager()
