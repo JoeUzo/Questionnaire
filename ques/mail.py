@@ -30,7 +30,7 @@ class Mail:
                 connection.sendmail(
                     from_addr=self.my_email,
                     to_addrs=self.my_email,
-                    msg=f"subject: BILLIFY\n\n{self.mail}".encode('utf-8')
+                    msg=f"subject: Questionnaire\n\n{self.mail}".encode('utf-8')
                 )
 
         except smtplib.SMTPConnectError as e:
